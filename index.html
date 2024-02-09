@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>UART通信の結果表示</title>
+  </head>
+  <body>
+     <p id="connectionStatus"></p>
+    <select id="baudrateSelect">
+      <option value="1200">1200</option>
+      <option value="2400">2400</option>
+      <option value="4800">4800</option>
+      <option value="9600">19200</option>
+      <option value="19200">19200</option>
+      <option value="38400">38400</option>
+      <option value="57600">38400</option>
+      <option value="115200">115200</option>
+      <!-- 他のボーレートのオプションを追加したいときは同様に -->
+    </select>
+    <button id="connectButton">Connect</button>
+    <button id="disconnectButton">Disconnect</button>
+    <button id="clearButton">Clear</button><br>
+    <input type="text" id="commandInput" onkeypress="handleKeyPress(event)" placeholder="コマンド"><br>
+    <textarea id="resultTextarea" rows="50" cols="50" readonly></textarea>
+    <script src="monitor.js"></script>
+  </body>
+</html>
